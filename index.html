@@ -89,12 +89,23 @@
           margin-left: 160px; /* Same as the width of the sidebar */
           padding: 0px 10px;
         }
-        
+
+            
         /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
         @media screen and (max-height: 450px) {
           .sidenav {padding-top: 15px;}
           .sidenav a {font-size: 18px;}
         }
+        @media screen and (max-width: 700px) {
+          .sidebar {
+            width: 50%;
+            height: auto;
+            position: relative;
+          }
+          .sidebar a {float: left;}
+          div.content {margin-left: 0;}
+        }
+         
         </style>
 
         <div id="map">
@@ -117,6 +128,7 @@
 
     </body>
 </html>
+
 
 
 
