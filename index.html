@@ -47,12 +47,16 @@
     </head>
     <body>
         <div class="sidenav"">
-          <p></p>
+          <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
           <a class="active" href="#edu_health">Education and Health </a>
           <a href="#transport"> Transportation </a>
           <a href="#kudumbashree"> Kudumbashree </a>
           <a href="#hks">   Haritha Karma Sena   </a>
           <a href="#migration"> Migration  </a>
+        </div>
+        <button class="openbtn" onclick="openNav()">&#9776; Toggle Sidepanel</button> 
+        <div id="button">
+          <button class="openbtn" onclick="openNav()">&#9776; Open Sidebar</button>
         </div>
         <style>
         .sidenav {
@@ -69,18 +73,52 @@
         
         /* The navigation menu links */
         .sidenav a {
-          padding: 6px 8px 6px 16px;
+          padding: 6px 8px 10px 16px;
           text-decoration: none;
           font-size: 20px;
           color: #E8E8E8;
           display: block;
+          transition: 0.5s; /* 0.5 second transition effect to slide in the sidepanel */
         }
         
         /* When you mouse over the navigation links, change their color */
         .sidenav a:hover {
           color: #f1f1f1;
         }
+
+/* VVV
+            
+    /* Position and style the close button (top right corner) */
+        .sidenav .closebtn {
+          position: absolute;
+          top: 0;
+          right: 25px;
+          font-size: 36px;
+          margin-left: 50px;
+        }
+        .openbtn {
+          font-size: 20px;
+          cursor: pointer;
+          background-color: #111;
+          color: white;
+          padding: 10px 15px;
+          border: none;
+        }
         
+        .openbtn:hover {
+          background-color: #444;
+        }
+
+        <script>
+            function openNav() {
+                document.getElementById("mySidepanel").style.width = "250px";
+            }
+            function closeNav() {
+                document.getElementById("mySidepanel").style.width = "0";
+            }
+
+/*  ^^^
+            
         /* Style page content */
         .main {
           margin-left: 160px; /* Same as the width of the sidebar */
@@ -114,6 +152,7 @@
 
     </body>
 </html>
+
 
 
 
